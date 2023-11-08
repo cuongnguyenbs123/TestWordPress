@@ -1,0 +1,9 @@
+<?php
+wp_head();
+?>
+<div>
+    header
+</div>
+<div>
+    header
+</div>
