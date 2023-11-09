@@ -2,15 +2,6 @@
     include('inc/nav-header.php');
     include('inc/assets.php');
 
-
-    function resign_js_jquery(){
-        wp_enqueue_script('jquery', get_stylesheet_directory_uri() .'../assets/js/jquery.js',array('jquery'));
-    }
-
-
-    add_action('wp_enqueue_scripts','resign_js_jquery');
-
-
     function loadMoreCategory() {
 
         $ajaxposts = new WP_Query([
@@ -44,7 +35,6 @@
         else {
             $response = '';
         }
-
             $result = [
             'max' => $max_pages,
             'html' => $response,

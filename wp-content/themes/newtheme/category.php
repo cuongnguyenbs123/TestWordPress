@@ -45,7 +45,7 @@
                 action: 'loadMoreCategory',
                 slug: this.dataset.slug,
                 posts_per_page: this.dataset.perpage,
-                paged: currentPage,
+                paged: currentPage
             },
             success: function (res) {
                 var prasel = JSON.parse(res);
