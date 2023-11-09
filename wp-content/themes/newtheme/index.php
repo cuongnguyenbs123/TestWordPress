@@ -2,7 +2,10 @@
  get_header();
 ?>
 <?php
-echo "a"
+  echo the_title();
+?>
+<?php
+  echo the_content();
 ?>
 <?php
  get_footer();
