@@ -26,6 +26,7 @@
                 $url= $img->getAttribute('src');
                 $url = $url . ' 1x,' . $url . ' 2x';
                 $img->setAttribute('srcset', $url);
+                $img->setAttribute('loading', 'lazy');
             }
             $content = $dom->saveHTML();
         }
