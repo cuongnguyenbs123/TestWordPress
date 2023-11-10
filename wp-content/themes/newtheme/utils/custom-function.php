@@ -43,12 +43,5 @@ function loadMoreCategory() {
         }
         add_action('wp_ajax_loadMoreCategory', 'loadMoreCategory');
         add_action('wp_ajax_nopriv_loadMoreCategory', 'loadMoreCategory');
-
-
-
-    // Custom srcset function
-    function  my_srcset( $content, $size, $args ) {
-        $src = str_replace( ' ', '%20', $src );
-        return $src;
-    }
+  
 ?>

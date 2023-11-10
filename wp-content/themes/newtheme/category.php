@@ -33,7 +33,7 @@
 
 <?=  get_template_directory_uri() ?>
 <button id="load-more" data-perpage=<?= $perPage?> data-slug=<?= $category?>
-    data-url=<?= get_template_directory_uri()?>>Load more</button>
+    data-url=<?= get_home_url()?>>Load more</button>
 
 <?php
     get_footer();    
