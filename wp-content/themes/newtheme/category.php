@@ -15,6 +15,8 @@
     foreach( $posts as $post ): setup_postdata($post); 
 ?>
     <div>
+    
+    <?php the_post_thumbnail('single-post-thumbnail'); ?>
      <a href=<?= get_the_permalink() ?>>   <?php
         the_title();
     ?></a>
@@ -33,24 +35,6 @@
 <button id="load-more" data-perpage=<?= $perPage?> data-slug=<?= $category?>
     data-url=<?= get_template_directory_uri()?>>Load more</button>
 
-<script>
-    let currentPage = 1;
-    $('#load-more').on('click', function () {
-        currentPage++;
-        $.ajax({
-            type: 'POST',
-            url: 'https://localhost/wordpress/wp-admin/admin-ajax.php',
-            dataType: 'html',
-            data: {
-                action: 'loadMoreCategory',
-                slug: this.dataset.slug,
-                posts_per_page: this.dataset.perpage,
-                paged: currentPage
-            },
-            success: function (res) {
-                var prasel = JSON.parse(res);
-                $('.content-container').append(prasel.html);
-            }
-        });
-    });
-</script>
+<?php
+    get_footer();    
+?>

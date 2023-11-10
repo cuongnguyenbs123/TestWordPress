@@ -1,20 +1,19 @@
-// const jquery = require("./jquery");
-
-//     let currentPage = 1;
-//     console.log('aaa')
-//     Jquery('#load-more').on('click', function () {
-//             currentPage++; // Do currentPage + 1, because we want to load the next page
-//             console.log(this.dataset.perpage)
-//         $.ajax({
-//             type: 'POST',
-//             url: '/wp-admin/admin-ajax.php',
-//             dataType: 'html',
-//             data: {
-//                 action: 'weichie_load_more',
-//                 paged: currentPage,
-//             },
-//             success: function (res) {
-//                 $('.publication-list').append(res);
-//             }
-//         });
-//     });
+let currentPage = 1;
+$('#load-more').on('click', function () {
+    currentPage++;
+    $.ajax({
+        type: 'POST',
+        url: 'https://localhost/wordpress/wp-admin/admin-ajax.php',
+        dataType: 'html',
+        data: {
+            action: 'loadMoreCategory',
+            slug: this.dataset.slug,
+            posts_per_page: this.dataset.perpage,
+            paged: currentPage
+        },
+        success: function (res) {
+            var prasel = JSON.parse(res);
+            $('.content-container').append(prasel.html);
+        }
+    });
+});

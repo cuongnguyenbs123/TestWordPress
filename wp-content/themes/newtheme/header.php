@@ -1,7 +1,6 @@
 <?php
-
-wp_head();
-
+    include('inc/assets.php');
+    wp_head();
 ?>
 
 
