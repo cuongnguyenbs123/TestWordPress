@@ -1,5 +1,4 @@
 <!-- Get post by category slug -->
-
 <?php
  get_header();
 ?>
@@ -14,27 +13,25 @@
     $posts = get_posts( $args );
     foreach( $posts as $post ): setup_postdata($post); 
 ?>
+    <?php
+     add_srcset_to_image($post, 'thumbnail');
+    ?>
     <div>
-    
-    <?php the_post_thumbnail('single-post-thumbnail'); ?>
-     <a href=<?= get_the_permalink() ?>>   <?php
+        <a href=<?= get_the_permalink() ?>> <?php
         the_title();
     ?></a>
 
-        <?php
-        the_content();
+    <?php
+        add_srcset_to_image($post,'content');
     ?>
-
         <br>
     </div>
-
     <?php endforeach; ?>
 </div>
 
 <?=  get_template_directory_uri() ?>
-<button id="load-more" data-perpage=<?= $perPage?> data-slug=<?= $category?>
-    data-url=<?= get_home_url()?>>Load more</button>
-
+<button id="load-more" data-perpage=<?= $perPage?> data-slug=<?= $category?> data-url=<?= get_home_url()?>>Load
+    more</button>
 <?php
     get_footer();    
 ?>

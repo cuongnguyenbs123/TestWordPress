@@ -3,7 +3,7 @@ $('#load-more').on('click', function () {
     currentPage++;
     $.ajax({
         type: 'POST',
-        url: 'https://localhost/wordpress/wp-admin/admin-ajax.php',
+        url: this.dataset.url+'/wp-admin/admin-ajax.php',
         dataType: 'html',
         data: {
             action: 'loadMoreCategory',

@@ -279,7 +279,6 @@ function the_post_thumbnail_url( $size = 'post-thumbnail' ) {
  */
 function get_the_post_thumbnail_caption( $post = null ) {
 	$post_thumbnail_id = get_post_thumbnail_id( $post );
-
 	if ( ! $post_thumbnail_id ) {
 		return '';
 	}
