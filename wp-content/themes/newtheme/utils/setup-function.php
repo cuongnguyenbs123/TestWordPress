@@ -32,4 +32,27 @@
         }
         echo $content;
     }
+
+    //get trending post
+
+    function get_trending_post($paged = 1) {
+        $args = array(
+            'meta_key'     => 'post_views',
+            'meta_value'   => '2',
+            'meta_compare' => '>=',
+            'orderby'    => 'meta_value_num',
+            'ignore_sticky_posts' => 1,
+            'posts_per_page' => get_option( 'posts_per_page' ),
+            'paged' => $paged,
+            'date_query' => array(
+                array(
+                        'year'  => $today['year'],
+                        'month' => $today['mon'],
+                        'day'   => $today['mday'],
+            ),
+      ),
+      );
+      $trenquery = new WP_Query( $args );
+      return $trenquery;
+    }
 ?>

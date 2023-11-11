@@ -21,5 +21,11 @@
         wp_enqueue_script('custom_script');
         }
     add_action('wp_enqueue_scripts', 'my_scripts_method');
-?>
 
+    function my_styles_method(){
+        wp_enqueue_style('custom_style',
+        get_stylesheet_directory_uri() .'../build/index.css',
+       );
+    }
+    add_action('wp_enqueue_scripts', 'my_styles_method');
+?>

@@ -1,0 +1,6 @@
+node_modules
+/wp-content/plugins/themes/newtheme/build
+/wp-content/plugins/themes/newtheme/node_modules
+wp-config.php
+vendor
+composer.json

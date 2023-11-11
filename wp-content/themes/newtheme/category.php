@@ -1,6 +1,6 @@
 <!-- Get post by category slug -->
 <?php
- get_header();
+  get_header();
 ?>
 <div class="content-container">
     <?php
@@ -20,7 +20,6 @@
         <a href=<?= get_the_permalink() ?>> <?php
         the_title();
     ?></a>
-
     <?php
         add_srcset_to_image($post,'content');
     ?>
@@ -28,10 +27,5 @@
     </div>
     <?php endforeach; ?>
 </div>
-
 <?=  get_template_directory_uri() ?>
-<button id="load-more" data-perpage=<?= $perPage?> data-slug=<?= $category?> data-url=<?= get_home_url()?>>Load
-    more</button>
-<?php
-    get_footer();    
-?>
+<button id="load-more" data-perpage=<?= $perPage?> data-slug=<?= $category?> data-url=<?= get_home_url()?>>Loadmore</button>

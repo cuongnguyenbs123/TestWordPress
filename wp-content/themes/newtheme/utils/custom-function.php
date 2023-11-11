@@ -2,7 +2,6 @@
 
 /// Load more ajax function
 function loadMoreCategory() {
-x
     $ajaxposts = new WP_Query([
         'tax_query' => array(
             array(

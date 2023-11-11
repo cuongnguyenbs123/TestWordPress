@@ -17,6 +17,7 @@ class ComposerStaticInit14b259b952ff223e46f158e45513084a
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Component\\VarDumper\\' => 28,
+            'ScssPhp\\ScssPhp\\' => 16,
         ),
     );
 
@@ -28,6 +29,10 @@ class ComposerStaticInit14b259b952ff223e46f158e45513084a
         'Symfony\\Component\\VarDumper\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/var-dumper',
+        ),
+        'ScssPhp\\ScssPhp\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/scssphp/scssphp/src',
         ),
     );
 

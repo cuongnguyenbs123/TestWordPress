@@ -1,0 +1,1 @@
+{"version":3,"file":"index.css","mappings":";;;AAGA;EACI,cAJY;AAEhB;;AAKA;EACI,WAPa;AAKjB,C","sources":["webpack://newtheme/./assets/css/index.scss"],"sourcesContent":["$base-color-red:#ff0000;\r\n$base-color-blue:blue;\r\n\r\n.red{\r\n    color: $base-color-red;\r\n}\r\n\r\n.blue{\r\n    color: $base-color-blue;\r\n}"],"names":[],"sourceRoot":""}
